@@ -34,4 +34,5 @@ int main() {
     std::map<int, std::vector<int>> grouped = group_by_last_digit(V);
 
     print_map(grouped);
+    return 0;
 }
