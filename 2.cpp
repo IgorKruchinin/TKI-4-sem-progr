@@ -56,4 +56,5 @@ int main() {
         std::cerr << "Error: " << e.what() << "\n";
         return 1;
     }
+    return 0;
 }
