@@ -63,4 +63,5 @@ int main() {
     }
 
     std::cout << "Processing complete. Output written to " << name2 << '\n';
+    return 0;
 }
