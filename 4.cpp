@@ -28,4 +28,6 @@ int main() {
     int count = std::count_if(V.begin(), V.end(), pred_unary);
 
     std::cout << "Количество элементов, для которых |x| <= " << K << ": " << count << "\n";
+
+    return 0;
 }
