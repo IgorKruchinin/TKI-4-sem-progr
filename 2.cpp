@@ -42,7 +42,13 @@ std::list<int> insert_neg_ones_after_first_half(std::list<int> lst) {
 }
 
 int main() {
-    std::list<int> L = {10, 20, 30, 40};
+    std::list<int> L;
+    std::copy(std::istream_iterator<int>(std::cin), std::istream_iterator<int>(), std::back_inserter(L));
+
+    if (std::cin.bad()) {
+        std::cerr << "Ошибка ввода\n";
+        return 1;
+    }
 
     std::cout << "Original list:\n";
     print_list(L);
