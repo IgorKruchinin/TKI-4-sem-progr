@@ -12,7 +12,13 @@ struct less_abs {
 
 int main() {
     int K = 5;
-    std::vector<int> V = {3, -7, 0, 4, -5, 8, -2};
+    std::vector<int> V;
+    std::copy(std::istream_iterator<int>(std::cin), std::istream_iterator<int>(), std::back_inserter(V));
+
+    if (std::cin.bad()) {
+        std::cerr << "Ошибка ввода\n";
+        return 1;
+    }
 
     // Создаём бинарный предикат как лямбду, используя функтор less_abs
     auto pred_binary = [K](int x) {
