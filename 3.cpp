@@ -29,7 +29,13 @@ void print_map(const std::map<int, std::vector<int>>& M) {
 }
 
 int main() {
-    std::vector<int> V = {12, 23, 32, 45, 13, 22};
+    std::vector<int> V;
+    std::copy(std::istream_iterator<int>(std::cin), std::istream_iterator<int>(), std::back_inserter(V));
+
+    if (std::cin.bad()) {
+        std::cerr << "Ошибка ввода\n";
+        return 1;
+    }
 
     std::map<int, std::vector<int>> grouped = group_by_last_digit(V);
 
